@@ -1,0 +1,29 @@
+//.BookIMG {
+//  width: 350px;
+//  height: 495px;
+//}
+
+.main-row-manga {
+  display: flex;
+  justify-content: center;
+}
+
+.MangaButton {
+  font-family: Consolas,sans-serif;
+  font-size: 16px;
+  padding: 20px 20px;
+  color: #fff;
+  background: #2196F3;
+  border-radius: 5px;
+  border: none;
+  margin-top: 30px;
+  margin-left: 20px;
+  position: fixed;
+  top: 75%;
+  left: 85%;
+}
+
+.MangaButton:hover {
+  cursor: pointer;
+  background: #0d5fa0;
+}

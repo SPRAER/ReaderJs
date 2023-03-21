@@ -1,5 +1,5 @@
 import React from "react";
-import SearchBar from "../SearchBar";
+import SearchBar from "../searchbar/SearchBar";
 import '../../UI/assets/scss/MobTopNav.scss';
 
 class MobileTopNavigation extends React.Component{

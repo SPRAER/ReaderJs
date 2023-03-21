@@ -5,7 +5,7 @@
   .add-music-sub-container{
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     margin: 10px;
     input,select,button{
       width: 100%;

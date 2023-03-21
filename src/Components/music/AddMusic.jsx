@@ -40,10 +40,13 @@ function AddMusic() {
                 <div className="d2">
                     <div>
                         <input type="text" value={"ID: "+id} disabled/>
-                        <input type="text" placeholder={"CurrentPlayingLarge Name"} id={"name"}/>
-                        <input type="text" placeholder={"Singer Name"} id={"artist"}/>
+                        <input type="text" placeholder={"Название произведения"} id={"name"}/>
+                        <input type="text" placeholder={"Автор"} id={"artist"}/>
+                        <input type="text" placeholder={"Кол-во страниц"} id={"name"}/>
+                        <input type="text" placeholder={"Описание"} id={"artist"}/>
+                        <input type="text" placeholder={"Жанры"} id={"artist"}/>
                         <Button  style={{backgroundColor: useStyle.theme}} variant={"contained"} endIcon={<Add/>}>
-                            Add
+                            Добавить
                         </Button>
                     </div>
                     <div className={"preview"}>

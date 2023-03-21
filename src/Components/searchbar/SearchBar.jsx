@@ -1,9 +1,9 @@
 import React, {useEffect, useRef, useState} from "react";
 import SearchSharpIcon from "@mui/icons-material/SearchSharp";
 import CancelIcon from "@mui/icons-material/Cancel";
-import '../UI/assets/scss/SearchBar.scss';
+import '../../UI/assets/scss/SearchBar.scss';
 import {useDispatch} from "react-redux";
-import {setSearch} from "../Store/actions/actions";
+import {setSearch} from "../../Store/actions/actions";
 import {Link} from "react-router-dom";
 
 const SearchBar = () => {

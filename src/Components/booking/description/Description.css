@@ -40,13 +40,13 @@
     height: 654px;
 }
 
-.PageFlex {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
+/*.PageFlex {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    flex-wrap: wrap;*/
+/*}*/
 
 .TitleH2 {
     text-align: center;

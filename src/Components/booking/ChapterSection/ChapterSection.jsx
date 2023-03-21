@@ -7,10 +7,11 @@ const mangalist2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 1
 
 const ChapterSelection = () => {
 
-    const [ModalActive, setModalActive] = useState(false);
+    const [ModalActive, setModalActive] = useState(true);
 
     return (
         <Modal acrive={ModalActive} setActive={setModalActive}>
+            <div className="PageFlex">
              {
                     mangalist2.map(item => (
                         <div className="demoPage">
@@ -20,6 +21,7 @@ const ChapterSelection = () => {
                         </div>
                     ))
                 }
+            </div>
         </Modal>
     );
 };

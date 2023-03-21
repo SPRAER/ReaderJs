@@ -5,7 +5,7 @@ import Button from "@mui/material/Button";
 
 const Description = () => {
 
-    const [ModalActive, setModalActive] = useState(false);
+    const [ModalActive, setModalActive] = useState(true);
 
     return (
         <Modal acrive={ModalActive} setActive={setModalActive}>

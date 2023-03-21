@@ -10,7 +10,7 @@ import Booking from "../booking/booking";
 const openBook = (book) => {
     switch (book) {
         case "booking":
-            return <Booking/>
+            return <Booking />
         case "description":
             return <Description/>
         case "chapterSelection":
@@ -23,8 +23,8 @@ const openBook = (book) => {
 const MangaCardContainer = () => {
     const {playlists} = useSelector(state => state.musicReducer);
 
-    const [ModalBook, setModalBook] = useState('Description');
-    const [active, setModalActive] = useState(false);
+    const [ModalBook, setModalBook] = useState('chapterSelection');
+    // const [active, setModalActive] = useState(false);
 
     return (
         <Container>
@@ -40,7 +40,7 @@ const MangaCardContainer = () => {
                     openBook(ModalBook)
                 }
 
-            <button className="MangaButton" onClick={() => setModalActive(true)}>Открыть мангу</button>
+            <button className="MangaButton" onClick={() => openBook(ModalBook)}>Открыть мангу</button>
         </Container>
     );
 }

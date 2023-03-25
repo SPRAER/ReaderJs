@@ -4,6 +4,21 @@ export const themes = {
     light: {
         theme: "#07689f",
         subTheme: "#f6f6f6",
+        sidebarRight: {
+            borderRight: '1px solid #e0e0e0',
+            backgroundColor: "#f6f6f6",
+            color: "#2b2024",
+        },
+        sidebarTop: {
+            borderTop: '1px solid #e0e0e0',
+            backgroundColor: "#f6f6f6",
+            color: "#2b2024",
+        },
+        sidebarBottom: {
+            borderBottom: '1px solid #e0e0e0',
+            backgroundColor: "#f6f6f6",
+            color: "#2b2024",
+        },
         component:{
             backgroundColor: "#f6f6f6",
             color: "#2b2024",
@@ -29,8 +44,23 @@ export const themes = {
     dark: {
         theme:"#4e6ecc",
         subTheme: "#292929",
+        sidebarRight: {
+            borderRight: '1px solid #343434',
+            backgroundColor: "#1b1b1b",
+            color: "#eeeeee"
+        },
+        sidebarTop: {
+            borderTop: '1px solid #343434',
+            backgroundColor: "#1b1b1b",
+            color: "#eeeeee"
+        },
+        sidebarBottom: {
+            borderBottom: '1px solid #343434',
+            backgroundColor: "#1b1b1b",
+            color: "#eeeeee"
+        },
         component:{
-            backgroundColor: "#191919",
+            backgroundColor: "#1b1b1b",
             color: "#eeeeee",
         },
         button:{

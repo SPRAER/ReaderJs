@@ -8,9 +8,9 @@ let SideBar = () => {
     const useStyle = useContext(ThemeContext);
 
     return (
-        <aside style={useStyle.component} className={"aside-bar"}>
+        <aside style={useStyle.sidebarRight} className={"aside-bar"}>
             <div className="aside-bar-container">
-                <p className={"p1"}>
+                <p className={"p1"} style={useStyle.sidebarBottom}>
                     <span>Меню</span>
                 </p>
                 <SideBarOptions className={"lib-sub"} Icon={Home} href={"/home"} title={"Главная"} />
@@ -20,7 +20,7 @@ let SideBar = () => {
             </div>
 
             <div className="aside-bar-container playlist">
-                <p className={"p1"}>
+                <p className={"p1"} style={useStyle.sidebarTop}>
                     <span>Моя подборка</span>
                 </p>
                 <SideBarOptions className={"lib-sub"} Icon={Folder} href={"/home/playlist/classic"}  title={"Класика"}/>

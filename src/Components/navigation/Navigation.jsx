@@ -13,7 +13,7 @@ function Navigation() {
 
     const useStyle = useContext(ThemeContext);
     return (
-        <nav style={useStyle.component}>
+        <nav style={useStyle.sidebarBottom}>
             <div className="profile">
                 <Button className={"Dropdown-btn"}
                         startIcon={<Avatar variant={"rounded"} style={{width:'50px',height:'50px',padding:'2px', color: '#000', borderRadius: '10px'}} src={require("./../../UI/assets/img/avatar2.jpg")}>BG</Avatar>}>

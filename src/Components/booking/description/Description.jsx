@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import './Description.css';
+import './Description.scss';
 import Modal from "./../../modal/Modal";
 import Button from "@mui/material/Button";
 

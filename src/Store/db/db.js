@@ -20,7 +20,7 @@ let musicDB = [
         name: "Наруто",
         author_name: "Масаси Кисимото",
         img: "GiaIb4Y3MgA.jpg",
-        lang: "Russian",
+        lang: "ENGLISH",
         timesPlayed: 0,
         type:"classic",
         musicName: "mixkit-games-worldbeat-466.mp3",

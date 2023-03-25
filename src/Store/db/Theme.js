@@ -3,7 +3,7 @@ import React from "react";
 export const themes = {
     light: {
         theme: "#07689f",
-        subTheme: "#a2d5f2",
+        subTheme: "#f6f6f6",
         component:{
             backgroundColor: "#f6f6f6",
             color: "#2b2024",
@@ -27,10 +27,10 @@ export const themes = {
         }
     },
     dark: {
-        theme:"#4ecca3",
-        subTheme: "#a2d5f2",
+        theme:"#4e6ecc",
+        subTheme: "#292929",
         component:{
-            backgroundColor: "#232931",
+            backgroundColor: "#191919",
             color: "#eeeeee",
         },
         button:{

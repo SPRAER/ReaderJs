@@ -6,25 +6,26 @@ import Container from "../healpers/Container";
 import ChapterSelection from "../booking/ChapterSection/ChapterSection";
 import Description from "../booking/description/Description";
 import Booking from "../booking/booking";
-
-const openBook = (book) => {
-    switch (book) {
-        case "booking":
-            return <Booking />
-        case "description":
-            return <Description/>
-        case "chapterSelection":
-            return <ChapterSelection/>
-        default:
-            return <Description/>
-    }
-}
+import Modal from "../modal/Modal";
 
 const MangaCardContainer = () => {
     const {playlists} = useSelector(state => state.musicReducer);
 
     const [ModalBook, setModalBook] = useState('chapterSelection');
-    // const [active, setModalActive] = useState(false);
+    const [ModalActive, setModalActive] = useState(false);
+
+    const openBook = (book) => {
+        switch (book) {
+            case "booking":
+                return <Booking mBook={ModalBook} setMBook={setModalBook} />
+            case "description":
+                return <Description/>
+            case "chapterSelection":
+                return <ChapterSelection/>
+            default:
+                return <Description/>
+        }
+    }
 
     return (
         <Container>
@@ -36,11 +37,13 @@ const MangaCardContainer = () => {
                 }
             </div>
 
+            <Modal acrive={ModalActive} setActive={setModalActive}>
                 {
                     openBook(ModalBook)
                 }
+            </Modal>
 
-            <button className="MangaButton" onClick={() => openBook(ModalBook)}>Открыть мангу</button>
+            <button className="MangaButton" onClick={() => setModalActive(true)}>Открыть мангу</button>
         </Container>
     );
 }

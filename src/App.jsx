@@ -1,8 +1,8 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect} from "react";
 import Home from "./Pages/Home";
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Login from "./Pages/Login";
-import {ThemeContext} from "./Store/db/Theme";
+import {ThemeContext, themes} from "./Store/db/Theme";
 import DB from "./Store/db/db";
 import {useDispatch, useSelector} from "react-redux";
 import {setPlaylist} from "./Store/actions/actions";
@@ -26,10 +26,8 @@ const App = () => {
         }
     },[dispatch, language]);
 
-    const [theme,setTheme] = useState("light");
-
     return (
-        <ThemeContext.Provider value={[theme,setTheme]}>
+        <ThemeContext.Provider value={themes.light}>
             <>
                 <Router>
                     <Routes>

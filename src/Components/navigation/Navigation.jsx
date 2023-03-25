@@ -10,14 +10,6 @@ import {Brightness4, GTranslate} from "@mui/icons-material";
 
 function Navigation() {
     const [isLanguageListOpen, setLangList] = useState(false);
-    const [isOpenProfile, setOpenProfile] = useState(false);
-
-
-    function handleOpenLanguageList() {
-        if (isOpenProfile === true)
-            setOpenProfile(!isOpenProfile);
-        setLangList(!isLanguageListOpen);
-    }
 
     const useStyle = useContext(ThemeContext);
     return (
@@ -25,22 +17,22 @@ function Navigation() {
             <div className="profile">
                 <Button className={"Dropdown-btn"}
                         startIcon={<Avatar variant={"rounded"} style={{width:'50px',height:'50px',padding:'2px', color: '#000', borderRadius: '10px'}} src={require("./../../UI/assets/img/avatar2.jpg")}>BG</Avatar>}>
-                    <p style={{color: '#000'}}>Bogdan Gogolev</p>
+                    <p style={useStyle.component}>Bogdan Gogolev</p>
                 </Button>
             </div>
 
-            <Button className={"Dropdown-btn"} onClick={() => null} style={{margin: "5px 15px", color: '#000'}} endIcon={<Brightness4/>}>
+            <Button className={"Dropdown-btn"} onClick={() => null} style={useStyle.component} endIcon={<Brightness4/>}>
                 <div className="wrapper">
                     <p>Тема</p>
                 </div>
             </Button>
 
             <SearchBar/>
-            <div className={"language"} onClick={handleOpenLanguageList}>
+            <div className={"language"} onClick={() => setLangList(!isLanguageListOpen)}>
                 <Button className={"Dropdown-btn"} startIcon={<GTranslate/>}
                         endIcon={isLanguageListOpen ? <ExpandMoreIcon/> : <ExpandLessIcon/>}>
                     <div className="wrapper">
-                        <p style={{color: '#000'}}>Сортировка по языкам</p>
+                        <p style={useStyle.component}>Сортировка по языкам</p>
                     </div>
                 </Button>
                 {

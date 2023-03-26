@@ -37,3 +37,10 @@ export const setMusicLang = (langList) => {
         payload: langList
     };
 };
+
+export const setModalBook = (modalBook) => {
+    return {
+        type:"SET_MANGA_MODAL",
+        payload: modalBook
+    };
+};

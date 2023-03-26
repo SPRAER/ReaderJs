@@ -28,6 +28,13 @@ function Navigation() {
             </Button>
 
             <SearchBar/>
+
+            <Button className={"Dropdown-btn"} onClick={() => null} style={useStyle.component}>
+                <div className="wrapper">
+                    <p>ENG / RU</p>
+                </div>
+            </Button>
+
             <div className={"language"} onClick={() => setLangList(!isLanguageListOpen)}>
                 <Button className={"Dropdown-btn"} startIcon={<GTranslate/>}
                         endIcon={isLanguageListOpen ? <ExpandMoreIcon/> : <ExpandLessIcon/>}>

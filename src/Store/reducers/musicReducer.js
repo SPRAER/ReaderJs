@@ -37,6 +37,11 @@ const musicReducer = (state=initialState,action) => {
                 ...state,
                 language: action.payload
             };
+        case "SET_MANGA_MODAL":
+            return {
+                ...state,
+                modalBook: action.modalBook
+            };
         default:
             return state;
     }

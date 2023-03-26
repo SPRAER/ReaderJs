@@ -6,6 +6,10 @@ import {increaseTimesPlayed, setCurrentPlaying} from "../../Store/actions/action
 import Name from "../healpers/Name";
 import {Skeleton} from "@mui/material";
 import Box from "@mui/material/Box";
+import Modal from "../modal/Modal";
+import Booking from "../booking/booking";
+import Description from "../booking/description/Description";
+import ChapterSelection from "../booking/ChapterSection/ChapterSection";
 
 function MangaCard(props) {
     const {name, img, author_name} = props.music;
@@ -29,6 +33,26 @@ function MangaCard(props) {
     }
 
     const [loaded,setLoaded] = useState(false);
+    const [ModalBook, setModalBook] = useState('chapterSelection');
+    const [ModalActive, setModalActive] = useState(false);
+
+    const openBook = (book) => {
+        switch (book) {
+            case "booking":
+                return <Booking mBook={ModalBook} setMBook={setModalBook} />
+            case "description":
+                return <Description/>
+            case "chapterSelection":
+                return <ChapterSelection/>
+            default:
+                return <Description/>
+        }
+    }
+
+    const ModalAndHandlePlay = () => {
+        setModalActive(true)
+        handlePlay()
+    }
 
     useEffect(()=>{
         setLoaded(true)
@@ -47,7 +71,7 @@ function MangaCard(props) {
                 </div>
                     :
                     <>
-                        <div onClick={handlePlay}  className={"music-card-cover"} onMouseOver={handleResponse}>
+                        <div onClick={ModalAndHandlePlay}  className={"music-card-cover"} onMouseOver={handleResponse}>
                             <img src={require("./../../UI/assets/img/" + img)} alt={name}/>
                             <div className="play-circle">
                                 <PlayCircleFilledWhiteIcon/>
@@ -60,6 +84,11 @@ function MangaCard(props) {
                     </>
             }
 
+            <Modal acrive={ModalActive} setActive={setModalActive}>
+                {
+                    openBook(ModalBook)
+                }
+            </Modal>
 
         </div>
     );

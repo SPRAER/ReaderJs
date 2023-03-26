@@ -4,8 +4,7 @@ export const themes = {
     light: {
         theme: "#07689f",
         subTheme: {
-            backgroundColor: "#f6f6f6",
-            borderTop: '1px solid #e0e0e0'
+            backgroundColor: "#f6f6f6"
         },
         sidebarRight: {
             borderRight: '1px solid #e0e0e0',
@@ -14,6 +13,7 @@ export const themes = {
         },
         sidebarTop: {
             borderTop: '1px solid #e0e0e0',
+            borderBottom: '1px solid #e0e0e0',
             backgroundColor: "#f6f6f6",
             color: "#2b2024",
         },
@@ -64,6 +64,7 @@ export const themes = {
         },
         sidebarTop: {
             borderTop: '1px solid #343434',
+            borderBottom: '1px solid #343434',
             backgroundColor: "#1b1b1b",
             color: "#eeeeee"
         },

@@ -65,7 +65,7 @@ let musicDB = [
     },
     {
         id: 4,
-        name: "One punch men",
+        name: "One punch man",
         author_name: "One",
         img: "apocalypse-1600776027-tsCmgK4gEU.jpg",
         lang: "ENGLISH",

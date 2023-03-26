@@ -32,7 +32,7 @@ const MangaCardContainer = () => {
             <div className={"music-card-container"}>
                 {
                     playlists.map(item => (
-                        <MangaCard key={item.id} music={item}/>
+                        <MangaCard key={item.id} music={item} />
                     ))
                 }
             </div>
@@ -43,7 +43,6 @@ const MangaCardContainer = () => {
                 }
             </Modal>
 
-            <button className="MangaButton" onClick={() => setModalActive(true)}>Открыть мангу</button>
         </Container>
     );
 }

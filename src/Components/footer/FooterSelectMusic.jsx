@@ -7,7 +7,7 @@ function FooterSelectMusic() {
     const useStyle = useContext(ThemeContext);
 
     return (
-        <div style={{backgroundColor:useStyle.subTheme}} className={"Footer_Select_Music"}>
+        <div style={useStyle.subTheme} className={"Footer_Select_Music"}>
             <Link to={"/home"}>
                 Выберете мангу чтобы продолжить
             </Link>

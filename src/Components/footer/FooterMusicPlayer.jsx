@@ -135,7 +135,7 @@ function FooterMusicPlayer({music}) {
         return s.substring(3);
     }
     return (
-        <div style={useStyle.component} className={"footer-player"}>
+        <div style={useStyle.musicFooter} className={"footer-player"}>
             <div className="playback">
                 {
                     !isNaN(seekTime) &&

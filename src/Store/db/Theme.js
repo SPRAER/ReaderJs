@@ -3,7 +3,10 @@ import React from "react";
 export const themes = {
     light: {
         theme: "#07689f",
-        subTheme: "#f6f6f6",
+        subTheme: {
+            backgroundColor: "#f6f6f6",
+            borderTop: '1px solid #e0e0e0'
+        },
         sidebarRight: {
             borderRight: '1px solid #e0e0e0',
             backgroundColor: "#f6f6f6",
@@ -19,9 +22,16 @@ export const themes = {
             backgroundColor: "#f6f6f6",
             color: "#2b2024",
         },
+        searchBar: {
+            backgroundColor: '#fff',
+            border: '1px solid #e0e0e0'
+        },
         component:{
             backgroundColor: "#f6f6f6",
             color: "#2b2024",
+        },
+        musicFooter: {
+          borderTop: '1px solid #e0e0e0'
         },
         button:{
             onHover:{
@@ -43,7 +53,10 @@ export const themes = {
     },
     dark: {
         theme:"#4e6ecc",
-        subTheme: "#292929",
+        subTheme: {
+            backgroundColor: "#292929",
+            borderTop: 'none'
+        },
         sidebarRight: {
             borderRight: '1px solid #343434',
             backgroundColor: "#1b1b1b",
@@ -59,9 +72,16 @@ export const themes = {
             backgroundColor: "#1b1b1b",
             color: "#eeeeee"
         },
+        searchBar: {
+            backgroundColor: '#212121',
+            border: '1px solid #343434'
+        },
         component:{
             backgroundColor: "#1b1b1b",
             color: "#eeeeee",
+        },
+        musicFooter: {
+            borderTop: 'none'
         },
         button:{
             onHover:{

@@ -1,10 +1,11 @@
-import React, {useEffect, useRef, useState} from "react";
+import React, {useContext, useEffect, useRef, useState} from "react";
 import SearchSharpIcon from "@mui/icons-material/SearchSharp";
 import CancelIcon from "@mui/icons-material/Cancel";
 import '../../UI/assets/scss/SearchBar.scss';
 import {useDispatch} from "react-redux";
 import {setSearch} from "../../Store/actions/actions";
 import {Link} from "react-router-dom";
+import {ThemeContext} from "../../Store/db/Theme";
 
 const SearchBar = () => {
     const [isSearchBarOpen, setSearchBarOpen] = useState(false);
@@ -22,6 +23,7 @@ const SearchBar = () => {
         }
     });
 
+    const useStyle = useContext(ThemeContext);
     const dispatch = useDispatch();
     const searchLink = useRef();
     const handleSearch = (e) => {
@@ -33,7 +35,7 @@ const SearchBar = () => {
 
     return (
         <div className={`${isSearchBarOpen ? "SearchBar  open" : "SearchBar"}`}>
-            <form onSubmit={handleSearch} className={"search-container"}>
+            <form onSubmit={handleSearch} className={"search-container"} style={useStyle.searchBar}>
                 {
                     isSearchBarOpen &&
                     <>

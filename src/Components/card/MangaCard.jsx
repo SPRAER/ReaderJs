@@ -33,21 +33,21 @@ function MangaCard(props) {
     }
 
     const [loaded,setLoaded] = useState(false);
-    const [ModalBook, setModalBook] = useState('chapterSelection');
+    //const [ModalBook, setModalBook] = useState('chapterSelection');
     const [ModalActive, setModalActive] = useState(false);
 
-    const openBook = (book) => {
-        switch (book) {
-            case "booking":
-                return <Booking mBook={ModalBook} setMBook={setModalBook} />
-            case "description":
-                return <Description/>
-            case "chapterSelection":
-                return <ChapterSelection/>
-            default:
-                return <Description/>
-        }
-    }
+    // const openBook = (book) => {
+    //     switch (book) {
+    //         case "booking":
+    //             return <Booking mBook={ModalBook} setMBook={setModalBook} />
+    //         case "description":
+    //             return <Description/>
+    //         case "chapterSelection":
+    //             return <ChapterSelection/>
+    //         default:
+    //             return <Description/>
+    //     }
+    // }
 
     const ModalAndHandlePlay = () => {
         setModalActive(true)
@@ -86,7 +86,7 @@ function MangaCard(props) {
 
             <Modal acrive={ModalActive} setActive={setModalActive}>
                 {
-                    openBook(ModalBook)
+                    <Booking />
                 }
             </Modal>
 

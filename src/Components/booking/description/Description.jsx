@@ -1,14 +1,14 @@
 import React, {useState} from 'react';
 import './Description.scss';
-import Modal from "./../../modal/Modal";
+//import Modal from "./../../modal/Modal";
 import Button from "@mui/material/Button";
 
 const Description = () => {
 
-    const [ModalActive, setModalActive] = useState(true);
+    //const [ModalActive, setModalActive] = useState(true);
 
     return (
-        <Modal acrive={ModalActive} setActive={setModalActive}>
+            <div className="PageFlex">
                 <h2>Человек бензопила</h2>
                 <div className="DescriptionContent">
                     <img className="DescriptionImg" src={require("./../../../UI/assets/img/chainsawman/1.jpg")} alt=""/>
@@ -46,10 +46,10 @@ const Description = () => {
                 <p>Переводчики: Japit Comics и Nippa Team</p>
                 <br/>
                 <p>Статус: завершено</p>
-                <Button onClick={() => setModalActive(true)} style={{background: '#2196F3', color: '#fff'}}>
+                <Button onClick={() => null} style={{background: '#2196F3', color: '#fff'}}>
                     Читать
                 </Button>
-            </Modal>
+            </div>
     );
 };
 

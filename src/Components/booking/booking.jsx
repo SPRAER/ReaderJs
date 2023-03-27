@@ -10,7 +10,6 @@ const Booking = ({BookActive}) => {
     const [acrive, setActive] = useState(true)
 
     return (
-        <Modal acrive={acrive} setActive={setActive}>
                 <HTMLFlipBook width={385} height={654}>
                     {
                         mangalist.map(item => (
@@ -20,7 +19,6 @@ const Booking = ({BookActive}) => {
                         ))
                     }
                 </HTMLFlipBook>
-        </Modal>
     );
 };
 

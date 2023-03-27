@@ -1,7 +1,7 @@
 import React, {useContext, useState} from 'react';
-import '../UI/assets/scss/HoverButton.scss';
+import '../../UI/assets/scss/HoverButton.scss';
 import {Button} from "@mui/material";
-import {ThemeContext} from "../Store/db/Theme";
+import {ThemeContext} from "../../Store/db/Theme";
 import {Link} from "react-router-dom";
 
 function HoverButton({text,variant,Icon}) {

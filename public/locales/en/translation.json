@@ -8,5 +8,9 @@
   "Manga": "Manga",
   "Redactor": "Redactor",
   "Classic": "Classic",
-  "Shonen": "Shonen"
+  "Shonen": "Shonen",
+  "SortingByLanguage": "Sorting by language",
+  "Search": "search",
+  "SearchPlaceholder": "search...",
+  "ChooseAMangaToContinue": "Choose a manga to continue"
 }

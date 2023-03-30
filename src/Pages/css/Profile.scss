@@ -2,10 +2,7 @@
   display: flex;
   flex-direction: column;
   .top-profile{
-
     z-index: 10;
-    background-color: #f1f1f1;
-    border-bottom: 1px solid gainsboro;
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
@@ -17,7 +14,6 @@
     .profile-detail{
       padding: 10px;
       margin: 10px;
-      background-color: #f1f1f1;
       border-radius: 7px;
       display: flex;
       flex-direction: column;

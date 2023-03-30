@@ -25,6 +25,11 @@ function Navigation() {
             setSwitchLanguage(true)
         }
     }
+
+    const handleTheme = () => {
+
+    }
+
     return (
         <nav style={useStyle.sidebarBottom}>
             <div className="profile">
@@ -52,7 +57,7 @@ function Navigation() {
                 <Button className={"Dropdown-btn"} startIcon={<GTranslate/>}
                         endIcon={isLanguageListOpen ? <ExpandMoreIcon/> : <ExpandLessIcon/>}>
                     <div className="wrapper">
-                        <p className="LangText" style={useStyle.component}>Сортировка по языкам</p>
+                        <p className="LangText" style={useStyle.component}>{t("SortingByLanguage")}</p>
                     </div>
                 </Button>
                 {

@@ -6,6 +6,7 @@ import {useDispatch} from "react-redux";
 import {setSearch} from "../../Store/actions/actions";
 import {Link} from "react-router-dom";
 import {ThemeContext} from "../../Store/db/Theme";
+import {useTranslation} from "react-i18next";
 
 const SearchBar = () => {
     const [isSearchBarOpen, setSearchBarOpen] = useState(false);
@@ -24,6 +25,8 @@ const SearchBar = () => {
     });
 
     const useStyle = useContext(ThemeContext);
+    const {t} = useTranslation();
+
     const dispatch = useDispatch();
     const searchLink = useRef();
     const handleSearch = (e) => {
@@ -45,7 +48,7 @@ const SearchBar = () => {
                                name={"searchQuery"}
                                value={searchQuery}
                                onChange={handleSearchQuery}
-                               placeholder={"Поиск..."}
+                               placeholder={t("SearchPlaceholder")}
                                type="text"
                                ref={searchRef}
                         />
@@ -57,7 +60,7 @@ const SearchBar = () => {
                 <div className={"SearchBar-customPlaceholderOpen"}
                      onClick={handleSearchBarOpen}>
                     <SearchSharpIcon style={{color: "grey"}} className="search-icon" fontSize="small"/>
-                    <p className={"hide"}>&nbsp;Поиск</p>
+                    <p className={"hide"}>&nbsp;{t("Search")}</p>
                 </div>
             }
             {

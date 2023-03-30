@@ -8,5 +8,9 @@
   "Manga": "Манга",
   "Redactor": "Редактор",
   "Classic": "Классика",
-  "Shonen": "Сёнен"
+  "Shonen": "Сёнен",
+  "SortingByLanguage": "Сортировка по языкам",
+  "Search": "поиск",
+  "SearchPlaceholder": "поиск...",
+  "ChooseAMangaToContinue": "Выберите мангу, чтобы продолжить"
 }

@@ -5,7 +5,7 @@ import './index.scss';
 import reducers from "./Store/reducers/reducer";
 import {Provider} from "react-redux";
 import { configureStore } from '@reduxjs/toolkit';
-import './Components/helpers/i18n/i18n'
+import './Components/healpers/i18n'
 
 const store = configureStore({reducer: reducers});
 

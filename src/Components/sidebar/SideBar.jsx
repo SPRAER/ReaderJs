@@ -25,8 +25,8 @@ let SideBar = () => {
                 <p className={"p1"} style={useStyle.sidebarTop}>
                     <span>{t("MySelection")}</span>
                 </p>
-                <SideBarOptions className={"lib-sub"} Icon={Folder} href={"/home/playlist/classic"}  title={"Класика"}/>
-                <SideBarOptions className={"lib-sub"} Icon={Folder} href={"/home/playlist/senen"}  title={"Сёнен"}/>
+                <SideBarOptions className={"lib-sub"} Icon={Folder} href={"/home/playlist/classic"}  title={t("Classic")}/>
+                <SideBarOptions className={"lib-sub"} Icon={Folder} href={"/home/playlist/senen"}  title={t("Shonen")}/>
             </div>
         </aside>
     );

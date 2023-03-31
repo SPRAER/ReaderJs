@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import './../../UI/assets/scss/Modale.scss'
+import './../../UI/assets/scss/Modale.scss';
 import {ThemeContext} from "../../Store/db/Theme";
 
 const Modal = ({acrive, setActive, children}) => {

@@ -24,7 +24,8 @@ export const themes = {
         },
         searchBar: {
             backgroundColor: '#fff',
-            border: '1px solid #e0e0e0'
+            border: '1px solid #e0e0e0',
+            color: '#2b2024'
         },
         component:{
             backgroundColor: "#f6f6f6",
@@ -75,7 +76,8 @@ export const themes = {
         },
         searchBar: {
             backgroundColor: '#212121',
-            border: '1px solid #343434'
+            border: '1px solid #343434',
+            color: '#eeeeee'
         },
         component:{
             backgroundColor: "#1b1b1b",

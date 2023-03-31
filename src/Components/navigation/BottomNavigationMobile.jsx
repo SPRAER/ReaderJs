@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useContext, useState} from "react";
 import '../../UI/assets/scss/BottomNavigation.scss';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
@@ -7,8 +7,11 @@ import ExploreOutlinedIcon from '@mui/icons-material/ExploreOutlined';
 import MenuBookOutlinedIcon from '@mui/icons-material/MenuBookOutlined';
 import Button from "@mui/material/Button";
 import {Link} from "react-router-dom";
+import {ThemeContext} from "../../Store/db/Theme";
 
 function BottomNavigationMobile() {
+    const useStyle = useContext(ThemeContext);
+
     const [menuItems, setMenuItem] = useState([
         {
             id: 0,
@@ -18,9 +21,9 @@ function BottomNavigationMobile() {
         },
         {
             id: 1,
-            icon: <SearchIcon/>,
-            href: "/home/search",
-            label: "Search"
+            icon: <ExploreOutlinedIcon/>,
+            href: "/home/redactor",
+            label: "Redactor"
         },
         {
             id: 2,
@@ -37,10 +40,10 @@ function BottomNavigationMobile() {
     ]);
     let currPath = window.location.pathname;
     return (
-        <div className="bottom-navigation">
+        <div className="bottom-navigation" style={useStyle.sidebarTop}>
             {
                 menuItems.map(({id, icon, href, label}) => (
-                    <Link className={"bottom-navigation-link"} key={id} to={href}>
+                    <Link className={"bottom-navigation-link"} key={id} to={href} style={useStyle.sidebarRight}>
                         <Button className={`${currPath === href ? "BottomNavAction active" : "BottomNavAction"}`}
                                     style={{borderRadius: 0}}>
                             {icon}

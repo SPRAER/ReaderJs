@@ -4,6 +4,10 @@
   flex-flow: row;
 }
 
+.mobile-theme {
+  margin-left: 10px !important;
+}
+
 @media only screen and (max-height: 610px) {
   .mob-top-navigation {
     height: 10vh;

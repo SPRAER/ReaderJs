@@ -22,8 +22,8 @@
     padding: 20px;
     border-radius: 12px;
     background-color: #fff;
-    height: 97vh;
-    width: 54vw;
+    width: 810px;
+    height: 694px;
     transform: scale(0.5);
     transition: 0.4s all;
     display: flex;
@@ -49,10 +49,6 @@
     width: 700px;
 }
 
-.demoPage {
-    margin: 10px;
-}
-
 .PageButton {
     margin: 20px;
 }
@@ -62,3 +58,9 @@
     width: 100%;
 }
 
+@media only screen and (max-width: 970px) {
+    .modal__content {
+        width: 94vw;
+        height: 86vh;
+    }
+}

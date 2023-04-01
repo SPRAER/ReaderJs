@@ -17,7 +17,7 @@ const ChapterSelection = ({acrive, setActive}) => {
                     <div className="PageFlex">
                         {
                             mangalist2.map(item => (
-                                <div className="demoPage">
+                                <div className="demoPage" style={{margin: '10px'}}>
                                     <Button className="PageButton" onClick={() => setModalActive(true)}
                                             style={{background: '#2196F3', color: '#fff'}}>
                                         Глава {item}

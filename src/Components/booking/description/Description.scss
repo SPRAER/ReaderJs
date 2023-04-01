@@ -37,3 +37,25 @@
     margin-left: 15px;
     width: 600px;
 }
+
+@media only screen and (max-width: 970px) {
+    .DescriptionPage p {
+        width: 230px;
+        margin-top: 15px;
+        font-size: 10px;
+    }
+    .DescriptionContent p {
+        margin-left: 15px;
+        width: 200px;
+        font-size: 10px;
+    }
+
+    .PageFlex {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 300px;
+    }
+}

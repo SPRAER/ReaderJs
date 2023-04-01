@@ -23,7 +23,8 @@
   padding: 20px;
   border-radius: 12px;
   background-color: #fff;
-  width: 54vw;
+  width: 485px;
+  height: 754px;
   transform: scale(0.5);
   transition: 0.4s all;
   display: flex;
@@ -40,3 +41,14 @@
   height: 654px;
 }
 
+.mobileBookIMG {
+  width: 307px;
+  height: 523px;
+}
+
+@media only screen and (max-width: 970px) {
+  .modal__content {
+    width: 94vw;
+    height: 86vh;
+  }
+}

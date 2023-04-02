@@ -5,6 +5,8 @@
   text-align: center;
   display: flex;
   flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
   .nav-item {
     height: 10vh;
     display: flex;
@@ -14,6 +16,19 @@
       color: #f8eeee;
       font-size: 3rem;
     }
+  }
+  .LoginInput {
+    width: 300px;
+    padding: 10px 20px;
+    outline: none;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+  }
+  .LoginTitle {
+    color: #eee;
+    font-size: 30px;
+    margin-bottom: 20px;
   }
   .main-row {
     display: flex;
@@ -43,22 +58,21 @@
         color: #f8eeee;
         font-size: 1.2rem;
       }
-      .btn{
-        font-family: Consolas, sans-serif;
-        letter-spacing: 2px;
-        border: none;
-        background-color: #282c34;
-        color: #fff;
-        font-size: 1.1rem;
-        text-transform: uppercase;
-        margin: 10px 0;
-        padding: 15px 20px;
-        border-radius: 5px;
-      }
-      .btn:hover{
-        opacity: 0.9;
-        cursor: pointer;
-      }
     }
+  }
+  .btn{
+    font-family: Consolas, sans-serif;
+    letter-spacing: 2px;
+    border: none;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background: #fff;
+    width: 300px;
+    padding: 10px;
+  }
+  .btn:hover{
+    opacity: 0.9;
+    cursor: pointer;
   }
 }

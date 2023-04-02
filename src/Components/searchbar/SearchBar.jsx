@@ -7,6 +7,7 @@ import {setSearch} from "../../Store/actions/actions";
 import {Link} from "react-router-dom";
 import {ThemeContext} from "../../Store/db/Theme";
 import {useTranslation} from "react-i18next";
+import cn from "classnames";
 
 const SearchBar = () => {
     const [isSearchBarOpen, setSearchBarOpen] = useState(false);
@@ -24,7 +25,7 @@ const SearchBar = () => {
         }
     });
 
-    const useStyle = useContext(ThemeContext);
+    const {isDark} = useContext(ThemeContext);
     const {t} = useTranslation();
 
     const dispatch = useDispatch();
@@ -38,7 +39,7 @@ const SearchBar = () => {
 
     return (
         <div className={`${isSearchBarOpen ? "SearchBar  open" : "SearchBar"}`}>
-            <form onSubmit={handleSearch} className={"search-container"} style={useStyle.searchBar}>
+            <form onSubmit={handleSearch} className={cn('search-container searchBar', {Dark: isDark === true})}>
                 {
                     isSearchBarOpen &&
                     <>

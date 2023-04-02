@@ -2,7 +2,7 @@ import React, {useEffect} from "react";
 import Home from "./Pages/Home";
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Login from "./Pages/Login";
-import {ThemeContext, themes} from "./Store/db/Theme";
+import {ThemeProvider} from "./Store/db/Theme";
 import DB from "./Store/db/db";
 import {useDispatch, useSelector} from "react-redux";
 import {setPlaylist} from "./Store/actions/actions";
@@ -27,10 +27,11 @@ const App = () => {
     },[dispatch, language]);
 
     return (
-        <ThemeContext.Provider value={themes.dark}>
+        <ThemeProvider>
             <>
                 <Router>
                     <Routes>
+                        // Пофиксить баг из-за переноса с 5 на 6 версии
                         <Route path="/" element={<Login/>}/>
                         <Route path="/home" element={<Home/>}/>
                         <Route path="/home/book" element={<Home/>}/>
@@ -42,7 +43,7 @@ const App = () => {
                     </Routes>
                 </Router>
             </>
-        </ThemeContext.Provider>
+        </ThemeProvider>
     );
 }
 

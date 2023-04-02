@@ -4,17 +4,20 @@ import './../../../UI/assets/scss/Modale.scss';
 import Button from "@mui/material/Button";
 import ChapterSelection from "../ChapterSection/ChapterSection";
 import {ThemeContext} from "../../../Store/db/Theme";
+import cn from "classnames";
 
 const DescriptionManga = ({acrive, setActive}) => {
 
     const [ModalActive, setModalActive] = useState(false);
-    const useStyle = useContext(ThemeContext);
+    const {isDark} = useContext(ThemeContext);
 
     return (
         <>
-            <div className={acrive ? "modal active" : "modal"} onClick={() => setActive(false)}>
-                <div className={acrive ? "modal__content active" : "modal__content"} onClick={e => e.stopPropagation()}
-                     style={useStyle.component}>
+            <div className={cn('modal', {active: acrive === true})} onClick={() => setActive(false)}>
+                <div className={cn('modal__content component',
+                    {Dark: isDark === true},
+                    {active: acrive === true})}
+                     onClick={e => e.stopPropagation()}>
                     <div className="PageFlex">
                         <h2>Человек бензопила</h2>
                         <div className="DescriptionContent">

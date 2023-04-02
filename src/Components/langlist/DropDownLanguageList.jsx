@@ -5,10 +5,11 @@ import LangList from "./LangList";
 import {ThemeContext} from "../../Store/db/Theme";
 import {useDispatch} from "react-redux";
 import {setMusicLang} from "../../Store/actions/actions";
+import cn from "classnames"
 
 const DropDownLanguageList = () => {
 
-    const useStyle = useContext(ThemeContext);
+    const {isDark} = useContext(ThemeContext);
 
     const listOfLanguage = [
         "Any",
@@ -41,7 +42,7 @@ const DropDownLanguageList = () => {
 
 
     return (
-        <div style={useStyle.component} className="dropdown">
+        <div className={cn('dropdown component', {Dark: isDark === true})}>
             <div className="dropdown-head">
                 <p>Выберите язык для чтения</p>
             </div>
@@ -53,7 +54,7 @@ const DropDownLanguageList = () => {
                 })}
             </div>
             <div className={"button-div"}>
-                <Button onClick={handleLangSelect} style={useStyle.button.contained}>
+                <Button onClick={handleLangSelect} className={cn('contained', {Dark: isDark === true})}>
                     Выбрать
                 </Button>   
             </div>

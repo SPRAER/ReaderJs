@@ -10,7 +10,22 @@ function LangList(props) {
         props.onClick(props.item,!isSelected);
         setSelected(!isSelected);
     };
-    const useStyle = useContext(ThemeContext);
+    const useStyle = {
+        button:{
+            onHover:{
+                backgroundColor:"#a2d5f2",
+                    color:"#191919"
+            },
+            contained:{
+                backgroundColor: "#07689f",
+                    color:"#fafafa"
+            },
+            outlined:{
+                backgroundColor:"transparent",
+                    color:"#191919"
+            }
+        }
+};
     const [onSelect, setOnSelect] = useState({});
     useEffect(() => {
         if (isSelected) {

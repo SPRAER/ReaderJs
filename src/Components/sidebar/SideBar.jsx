@@ -4,15 +4,16 @@ import SideBarOptions from "./SideBarOptions";
 import {ThemeContext} from "../../Store/db/Theme";
 import {Home, Folder, AccountCircle, MenuBook, NoteAdd} from "@mui/icons-material";
 import {useTranslation} from "react-i18next";
+import cn from "classnames";
 
 let SideBar = () => {
-    const useStyle = useContext(ThemeContext);
+    const {isDark} = useContext(ThemeContext);
     const {t} = useTranslation();
 
     return (
-        <aside style={useStyle.sidebarRight} className={"aside-bar"}>
+        <aside className={cn('aside-bar sidebarRight', {Dark: isDark === true})}>
             <div className="aside-bar-container">
-                <p className={"p1"} style={useStyle.sidebarBottom}>
+                <p className={cn('p1 sidebarBottom', {Dark: isDark === true})}>
                     <span>{t("Menu")}</span>
                 </p>
                 <SideBarOptions className={"lib-sub"} Icon={Home} href={"/home"} title={t("Home")} />
@@ -22,7 +23,7 @@ let SideBar = () => {
             </div>
 
             <div className="aside-bar-container playlist">
-                <p className={"p1"} style={useStyle.sidebarTop}>
+                <p className={cn('p1 sidebarTop', {Dark: isDark === true})}>
                     <span>{t("MySelection")}</span>
                 </p>
                 <SideBarOptions className={"lib-sub"} Icon={Folder} href={"/home/playlist/classic"}  title={t("Classic")}/>

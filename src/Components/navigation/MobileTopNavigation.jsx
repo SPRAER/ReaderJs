@@ -5,12 +5,13 @@ import {Button} from "@mui/material";
 import {Brightness4} from "@mui/icons-material";
 import {ThemeContext} from "../../Store/db/Theme";
 import {useTranslation} from "react-i18next";
+import cn from "classnames";
 
 const MobileTopNavigation = () => {
 
     const [switchLanguage, setSwitchLanguage] = useState(false);
 
-    const useStyle = useContext(ThemeContext);
+    const {isDark, setIsDark} = useContext(ThemeContext);
     const {t, i18n} = useTranslation();
 
     const changeLanguage = () => {
@@ -25,7 +26,7 @@ const MobileTopNavigation = () => {
 
     return (
         <nav className="mob-top-navigation">
-            <Button className={"Dropdown-btn mobile-theme"} onClick={() => null} style={useStyle.component} endIcon={<Brightness4/>}>
+            <Button className={cn('Dropdown-btn mobile-theme component', {Dark: isDark === true})} onClick={() => setIsDark(!isDark)} endIcon={<Brightness4/>}>
                 <div className="wrapper">
                     <p>{t("theme")}</p>
                 </div>
@@ -33,7 +34,7 @@ const MobileTopNavigation = () => {
 
             <SearchBar/>
 
-            <Button className={"Dropdown-btn"} onClick={() => changeLanguage()} style={useStyle.component}>
+            <Button className={cn('Dropdown-btn component', {Dark: isDark === true})} onClick={() => changeLanguage()}>
                 <div className="wrapper">
                     <p>ENG / RU</p>
                 </div>

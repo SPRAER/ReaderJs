@@ -2,12 +2,13 @@ import React, {useContext} from 'react';
 import '../../UI/assets/scss/NavigationButton.scss';
 import {ThemeContext} from "../../Store/db/Theme";
 import {Link} from "react-router-dom";
+import cn from "classnames";
 
 function NavigationButton(props) {
-    const useStyle = useContext(ThemeContext);
+    const {isDark} = useContext(ThemeContext);
     return (
         <React.Fragment>
-            <Link to={props.href} className={"Nav-btn"}  style={useStyle.button.outlined} >
+            <Link to={props.href} className={cn('Nav-btn outlined', {Dark: isDark === true})} >
                 {props.name}
             </Link>
         </React.Fragment>

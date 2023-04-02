@@ -18,6 +18,17 @@ a{
 button{
   text-transform: capitalize !important;
 }
+
+.component {
+  background-color: #f6f6f6;
+  color: #2b2024;
+}
+
+.component.Dark {
+  background-color: #1b1b1b;
+  color: #eeeeee;
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 7px;
@@ -38,4 +49,127 @@ button{
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #a2d5f2;
+}
+
+.theme {
+  color: #07689f
+};
+
+.subTheme {
+    background-color: #f6f6f6;
+  }
+
+.sidebarRight {
+  border-right: 1px solid #e0e0e0;
+  background-color: #f6f6f6;
+  color: #2b2024;
+}
+
+.sidebarTop {
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  background-color: #f6f6f6;
+  color: #2b2024;
+}
+
+.sidebarBottom {
+  border-bottom: 1px solid #e0e0e0;
+  background-color: #f6f6f6;
+  color: #2b2024;
+}
+
+.searchBar {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  color: #2b2024;
+}
+
+.component {
+  background-color: #f6f6f6;
+  color: #2b2024 !important;
+}
+
+.musicFooter {
+  border-top: 1px solid #e0e0e0;
+}
+
+button:hover {
+    background-color: #a2d5f2;
+    color: #191919;
+  }
+
+.contained {
+  background-color: #07689f;
+  color: #fafafa;
+}
+
+.outlined {
+  background-color: transparent;
+  color: #191919;
+}
+
+.volume {
+  color: #07689f;
+}
+
+.theme.Dark {
+  color: #07689f
+};
+
+.subTheme.Dark {
+  background-color: #292929;
+  border-top: none;
+}
+
+.sidebarRight.Dark {
+  border-right: 1px solid #343434;
+  background-color: #1b1b1b;
+  color: #eeeeee;
+}
+
+.sidebarTop.Dark {
+  border-top: 1px solid #343434;
+  border-bottom: 1px solid #343434;
+  background-color: #1b1b1b;
+  color: #eeeeee;
+}
+
+.sidebarBottom.Dark {
+  border-bottom: 1px solid #343434;
+  background-color: #1b1b1b;
+  color: #eeeeee;
+}
+
+.searchBar.Dark {
+  background-color: #212121;
+  border: 1px solid #343434;
+  color: #eeeeee;
+}
+
+.component.Dark {
+  background-color: #1b1b1b;
+  color: #eeeeee !important;
+}
+
+.musicFooter.Dark {
+  border-top: none;
+}
+
+.Tbutton.Dark:hover {
+  background-color: #a2d5f2;
+  color: #eeeeee;
+}
+
+.contained.Dark {
+  background-color: #07689f;
+  color: #fafafa;
+}
+
+.outlined.Dark {
+  background-color: transparent;
+  color: #eeeeee;
+}
+
+.volume.Dark {
+  color: #07689f;
 }

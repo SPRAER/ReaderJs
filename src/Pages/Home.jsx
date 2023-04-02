@@ -12,24 +12,19 @@ import Profile from "./Profile";
 import AddMusic from "../Components/music/AddMusic";
 import FooterSelectMusic from "../Components/footer/FooterSelectMusic";
 import CurrentPlayingLarge from "../Components/music/CurrentPlayingLarge";
-import Search from "./Search";
-import Redactor from "./Redactor";
 import Book from "./Book";
 import Playlist from "../Components/playlist/Playlist";
 import {Skeleton} from "@mui/material";
+import cn from 'classnames';
 
 function getCurrPage(pathName) {
     switch (pathName) {
         case "/home":
             return <MangaCardContainer/>
-        case "/home/search":
-            return <Search/>
         case "/home/profile":
             return <Profile/>
         case "/home/redactor":
             return <AddMusic/>
-        case "/home/add":
-            return <Redactor/>
         case "/home/book":
             return <Book/>
         default:
@@ -63,7 +58,7 @@ const Home = () => {
         return () => window.removeEventListener("resize", handleResize);
     });
 
-    const useStyle = useContext(ThemeContext);
+    const {isDark} = useContext(ThemeContext);
     const {playing, bannerOpen} = useSelector(state => state.musicReducer);
 
 
@@ -78,7 +73,9 @@ const Home = () => {
 
 
     return (
-        <div style={useStyle.component} className={"home-container"}>
+        <div className={cn("home-container", {
+            Dark: isDark === true
+        })}>
             {
                 !loaded ?
                     <div className="Home-skeleton">

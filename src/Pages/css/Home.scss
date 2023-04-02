@@ -10,7 +10,19 @@
   .main-home{
     flex: 0.8;
   }
+
 }
+
+.home-container {
+  background: #f6f6f6;
+  color: #2b2024;
+}
+
+.home-container.Dark{
+  background: #1b1b1b;
+  color: #eeeeee;
+}
+
 .current-large-banner{
   position: absolute;
   top: 0;
@@ -18,6 +30,7 @@
   width: 100%;
   height: 90vh;
 }
+
 @media only screen and (max-width: 970px) {
   .home-music-container {
     .sidebar-home{

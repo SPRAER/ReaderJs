@@ -39,7 +39,7 @@ function AddMusic() {
                 </div>
                 <div className="d2">
                     <div>
-                        <input type="text" value={"ID: "+id} disabled/>
+                        <input style={useStyle.subTheme} type="text" value={"ID: "+id} disabled/>
                         <input type="text" placeholder={"Название произведения"} id={"name"}/>
                         <input type="text" placeholder={"Автор"} id={"artist"}/>
                         <input type="text" placeholder={"Кол-во страниц"} id={"name"}/>

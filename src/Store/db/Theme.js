@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useMemo, useState} from "react";
 
 export const themes = {
     light: {
@@ -107,6 +107,16 @@ export const themes = {
 };
 
 export const ThemeContext = React.createContext(
-    themes.light
+    {isDark: false},
+    // themes.dark
 );
 
+export const ThemeProvider = ({children}) => {
+    const [isDark, setIsDark] = useState(false)
+
+    const value = useMemo(() => ({isDark, setIsDark}), [isDark])
+
+        return <ThemeContext.Provider value={value}>
+            {children}
+            </ThemeContext.Provider>
+}

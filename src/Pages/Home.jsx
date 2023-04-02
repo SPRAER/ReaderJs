@@ -9,7 +9,7 @@ import MangaCardContainer from "../Components/card/MangaCardContainer";
 import {useSelector} from "react-redux";
 import {ThemeContext} from "../Store/db/Theme";
 import Profile from "./Profile";
-import AddMusic from "../Components/music/AddMusic";
+import AddMusic from "../Components/card/AddManga";
 import FooterSelectMusic from "../Components/footer/FooterSelectMusic";
 import CurrentPlayingLarge from "../Components/music/CurrentPlayingLarge";
 import Book from "./Book";

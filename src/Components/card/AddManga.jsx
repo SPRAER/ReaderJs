@@ -1,11 +1,11 @@
 import React, {useContext, useEffect, useRef, useState} from 'react';
-import '../../UI/assets/scss/AddMusic.scss';
+import '../../UI/assets/scss/AddManga.scss';
 import {Add, Image, MusicNoteTwoTone} from "@mui/icons-material";
 import {Button} from "@mui/material";
 import {ThemeContext} from "../../Store/db/Theme";
-import musicDB from "../../Store/db/db";
+import DB from "../../Store/db/db";
 
-function AddMusic() {
+function AddManga() {
     const useStyle = useContext(ThemeContext);
     const fileRef = useRef();
     const [selected,setSelected] = useState(null);
@@ -17,7 +17,7 @@ function AddMusic() {
             setSelected(e.target.files[0].name)
         }
     })
-    let id =musicDB[musicDB.length-1].id + 1;
+    let id =DB[DB.length-1].id + 1;
     return (
         <form style={useStyle.component} className={"AddMusic"}>
             <div className="add-music-sub-container">
@@ -64,4 +64,4 @@ function AddMusic() {
     );
 }
 
-export default AddMusic;
+export default AddManga;

@@ -1,5 +1,5 @@
 import React, {useState} from "react"
-import '../../UI/assets/scss/MusicCardContainer.scss';
+import '../../UI/assets/scss/MangaCardContainer.scss';
 import MangaCard from "./MangaCard";
 import {useSelector} from "react-redux";
 import Container from "../healpers/Container";

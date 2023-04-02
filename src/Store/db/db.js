@@ -1,4 +1,4 @@
-let musicDB = [
+let DB = [
     {
         id: 0,
         name: "One piece",
@@ -145,4 +145,4 @@ let musicDB = [
     }
 ];
 
-export default musicDB;
+export default DB;

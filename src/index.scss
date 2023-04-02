@@ -84,6 +84,11 @@ button{
   color: #2b2024;
 }
 
+.searchInput {
+  background-color: #fff;
+  color: #2b2024;
+}
+
 .component {
   background-color: #f6f6f6;
   color: #2b2024 !important;
@@ -143,6 +148,12 @@ button:hover {
 .searchBar.Dark {
   background-color: #212121;
   border: 1px solid #343434;
+  color: #eeeeee;
+}
+
+
+.searchInput.Dark {
+  background-color: #212121;
   color: #eeeeee;
 }
 

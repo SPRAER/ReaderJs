@@ -16,11 +16,14 @@ import Book from "./Book";
 import Playlist from "../Components/playlist/Playlist";
 import {Skeleton} from "@mui/material";
 import cn from 'classnames';
+import Search from "./Search";
 
 function getCurrPage(pathName) {
     switch (pathName) {
         case "/home":
             return <MangaCardContainer/>
+        case "/home/search":
+            return <Search/>
         case "/home/profile":
             return <Profile/>
         case "/home/redactor":

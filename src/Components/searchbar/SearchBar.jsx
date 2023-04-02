@@ -45,13 +45,15 @@ const SearchBar = () => {
                     <>
                         <Link to={"/home/search"} ref={searchLink}/>
                         <SearchSharpIcon style={{color: "grey"}} className="search-icon" fontSize="small"/>
-                        <input id={"search-input"}
-                               name={"searchQuery"}
-                               value={searchQuery}
-                               onChange={handleSearchQuery}
-                               placeholder={t("SearchPlaceholder")}
-                               type="text"
-                               ref={searchRef}
+                        <input
+                            className={cn('searchInput', {Dark: isDark === true})}
+                            id={"search-input"}
+                            name={"searchQuery"}
+                            value={searchQuery}
+                            onChange={handleSearchQuery}
+                            placeholder={t("SearchPlaceholder")}
+                            type="text"
+                            ref={searchRef}
                         />
                     </>
                 }
@@ -68,8 +70,6 @@ const SearchBar = () => {
                 isSearchBarOpen &&
                 <div className={"SearchBar-customPlaceholderClose"}
                      onClick={handleSearchBarOpen}>
-                    {/*
-                    <p>Close&nbsp;</p>*/}
                     <CancelIcon style={{color: "grey"}} className="cancel hide" fontSize="small"/>
                 </div>
             }
